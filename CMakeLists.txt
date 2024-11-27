@@ -4,7 +4,7 @@ include(target_import_freertos)
 include(target_import_base)
 include(target_import_bsp_interface)
 
-set(ProjectName task)
+set(ProjectName FatFs)
 project(${ProjectName})
 enable_language(ASM)
 set(CMAKE_CXX_STANDARD 20)
