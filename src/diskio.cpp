@@ -8,4 +8,3 @@
 /*-----------------------------------------------------------------------*/
 
 #include "diskio.h" /* Declarations of disk functions */
-#include "ff.h"     /* Obtains integer types */
