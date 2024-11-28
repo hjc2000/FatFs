@@ -192,7 +192,7 @@
 /* Minimum number of sectors to switch GPT as partitioning format in f_mkfs() and
 /  f_fdisk(). 2^32 sectors maximum. This option has no effect when FF_LBA64 == 0. */
 
-#define FF_USE_TRIM 0
+#define FF_USE_TRIM 1
 /* This option switches support for ATA-TRIM. (0:Disable or 1:Enable)
 /  To enable this feature, also CTRL_TRIM command should be implemented to
 /  the disk_ioctl(). */
