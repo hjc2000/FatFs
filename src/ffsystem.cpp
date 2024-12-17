@@ -20,7 +20,14 @@ extern "C"
     )
     {
         /* Allocate a new memory block */
-        return new (std::nothrow) uint8_t[static_cast<size_t>(msize)];
+        try
+        {
+            return new uint8_t[static_cast<size_t>(msize)];
+        }
+        catch (...)
+        {
+            return nullptr;
+        }
     }
 
     void ff_memfree(
@@ -33,7 +40,7 @@ extern "C"
         }
 
         /* Free the memory block */
-        delete[] static_cast<uint8_t *>(mblock);
+        delete[] reinterpret_cast<uint8_t *>(mblock);
     }
 
 #endif
